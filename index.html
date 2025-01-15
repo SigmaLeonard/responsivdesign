@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="En responsiv hemsida som utforskar responsiv design.">
+  <title>Responsiv Design</title>
+  <style>
+    h1 {
+      color: gray;
+      text-align: center;
+    }
+
+    header {
+      min-height: 80vh;
+      background: rgb(134, 37, 200);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin-inline: auto;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 3rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .bilder {
+      grid-row: span 3;
+      display: grid;
+      grid-template-rows: subgrid;
+      gap: 1rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+  </style>
 </head>
+
 <body>
-    
+  <header>
+    <h1>Välkommen till Responsiv Design</h1>
+  </header>
+
+  <main class="wrapper">
+    <section>
+      <h2>Vad är responsiv design?</h2>
+      <p>Responsiv design innebär att skapa webbsidor som fungerar och ser bra ut på alla enheter, oavsett skärmstorlek.</p>
+    </section>
+
+    <section class="tags">
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JavaScript</div>
+      <div>Media Queries</div>
+      <div>Flexbox</div>
+      <div>Grid</div>
+    </section>
+
+    <section class="grid">
+      <article>
+        <h3>Flexbox</h3>
+        <p>Flexbox är en layoutmodell som gör det enkelt att skapa flexibla och responsiva layout-strukturer.</p>
+      </article>
+      <article>
+        <h3>Grid</h3>
+        <p>Grid är ett kraftfullt verktyg för att bygga komplexa och responsiva layouter.</p>
+      </article>
+      <article>
+        <h3>Media Queries</h3>
+        <p>Med media queries kan du anpassa designen för olika skärmstorlekar och enheter.</p>
+      </article>
+
+      <div class="bilder">
+        <img src="https://static.thatsup.co/content/img/article/20/sep/sa-bygger-du-en-bra-hemsida-till-ditt-foretag.jpg" alt="Exempelbild 1">
+        <img src="https://www.hjalpmedhemsidan.se/wp-content/uploads/2024/04/grundlaggande-elemen-for-en-bra-hemsida-1024x585.jpg" alt="Exempelbild 2">
+        <img src="https://jsdigital.se/wp-content/uploads/2020/12/skistar-snygg-hemsida-1024x512.jpg" alt="Exempelbild 3">
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
