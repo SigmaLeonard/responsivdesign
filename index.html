@@ -1,56 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="En responsiv hemsida som utforskar responsiv design.">
-  <title>Responsiv Design</title>
-  <link rel="stylesheet" type="text/css" href="styles.css"/>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiv Design</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <h1>Välkommen till Responsiv Design</h1>
-  </header>
-
-  <main class="wrapper">
-    <section>
-      <h2>Vad är responsiv design?</h2>
-      <p>Responsiv design innebär att skapa webbsidor som fungerar och ser bra ut på alla enheter, oavsett skärmstorlek.</p>
-    </section>
-
-    <section class="tags">
-      <div>HTML</div>
-      <div>CSS</div>
-      <div>JavaScript</div>
-      <div>Media Queries</div>
-      <div>Flexbox</div>
-      <div>Grid</div>
-    </section>
-
-    <section class="grid">
-      <article>
-        <h3>Flexbox</h3>
-        <p>Flexbox är en layoutmodell som gör det enkelt att skapa flexibla och responsiva layout-strukturer.</p>
-      </article>
-      <article>
-        <h3>Grid</h3>
-        <p>Grid är ett kraftfullt verktyg för att bygga komplexa och responsiva layouter.</p>
-      </article>
-      <article>
-        <h3>Media Queries</h3>
-        <p>Med media queries kan du anpassa designen för olika skärmstorlekar och enheter.</p>
-      </article>
-
-      <div class="bilder">
-        <img src="https://static.thatsup.co/content/img/article/20/sep/sa-bygger-du-en-bra-hemsida-till-ditt-foretag.jpg" alt="Exempelbild 1">
-        <img src="https://www.hjalpmedhemsidan.se/wp-content/uploads/2024/04/grundlaggande-elemen-for-en-bra-hemsida-1024x585.jpg" alt="Exempelbild 2">
-        <img src="https://jsdigital.se/wp-content/uploads/2020/12/skistar-snygg-hemsida-1024x512.jpg" alt="Exempelbild 3">
-      </div>
-    </section>
-  </main>
+    <header class="header">
+        <h1>Responsiv Design</h1>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="#grid">Gridlayout</a></li>
+            <li><a href="#media-queries">Media Queries</a></li>
+            <li><a href="#examples">Exempel</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section id="grid">
+            <h2>Gridlayout</h2>
+            <p>
+              Grid Layout är en utmärkt metod för responsiv design eftersom den möjliggör flexibel och exakt placering av element i både horisontella och vertikala rader och kolumner. Genom att definiera layouten med hjälp av procentuella värden eller fr-enheter kan innehållet anpassa sig dynamiskt till olika skärmstorlekar, vilket gör att designen fungerar smidigt på allt från mobiler till stora skärmar. Dessutom kan man enkelt justera layouten för olika enheter utan att behöva ändra på varje enskilt element, vilket gör det både effektivt och lätt att underhålla.
+            </p>
+        </section>
+        <section id="media-queries">
+            <h2>Media Queries</h2>
+            <p>
+              Media queries är en CSS-teknik som gör det möjligt att tillämpa olika stilar beroende på skärmstorlek, enhetens upplösning eller orientering. Den här metoden är en central del av responsiv design, eftersom den gör det möjligt att skapa anpassade layouter som förändras beroende på om användaren tittar på en sida via en mobiltelefon, surfplatta eller dator. Media queries gör det möjligt att styra alla aspekter av layouten, inklusive bildstorlekar, textstorlekar, och hur element är placerade på sidan.
+            </p>
+            <p>
+              Ett exempel på en media query kan se ut så här:
+            </p>
+            <pre><code>@media (max-width: 768px) {
+  /* Anpassa stilar för skärmar mindre än 768px breda (mobiltelefoner) */
+  body {
+      background-color: lightblue;
+  }
+  .container {
+      grid-template-columns: 1fr;
+  }
+}</code></pre>
+            <p>
+              I det här fallet tillämpas de angivna CSS-reglerna endast om skärmens bredd är mindre än 768px. Detta gör det möjligt att anpassa webbsidans design för att bättre passa mindre skärmar som på mobiler, vilket är viktigt för att säkerställa en bra användarupplevelse på alla enheter. Media queries är kraftfulla verktyg för att anpassa hela layouten och optimera användarupplevelsen beroende på enhetens storlek och funktionalitet.
+            </p>
+            <p>
+              Förutom skärmstorlek kan media queries även användas för att anpassa innehåll baserat på andra faktorer, som till exempel enhetens upplösning eller orientering (t.ex. porträttläge eller landskapsläge). Genom att kombinera olika media queries kan du skapa en design som är extremt flexibel och användarvänlig på en mängd olika enheter.
+            </p>
+        </section>
+        <section id="examples">
+            <h2>Exempel</h2>
+            <p>Här är några exempel på hemsidor med bra responsiv design:</p>
+            <div class="example-gallery">
+                <div class="example-item">
+                    <img src="https://mediaboozt.se/wp-content/uploads/2023/03/bra-modern-hemsida.webp" alt="Bra webbdesign 1 ">
+                    <p>I ovanstående bild ser vi hur hemsidan anpassar sig efter olika skärmstorlekar. Detta innebär att hemsidan har bra RESPONSIV DESIGN.</p>
+                </div>
+                <div class="example-item">
+                    <img src="https://skanea.se/wp-content/uploads/2024/01/Responsiv-design-1.webp" alt="Bra webdesign 2 ">
+                    <p>Som med förra bilden, hemsidan anpassar sig. Utan bra responsiv design blir hemsidan svår att förstå, därför är det mycket viktigt med proper responsiv design.</p>
+                </div>
+                <div class="example-item">
+                    <img src="https://webbkompaniet.se/wp-content/uploads/2023/05/responsiv-design-hemsida.png" alt="Bra webbdesign 3">
+                    <p>För att få din hemsida att bli responsiv som på bilderna, kan man använda säg av ovanstående metoder som presenterats tidigare ! En bra hemsida som ej är responsiv blir motbjudande för den som vistas på hemsidan. </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Skapad av Leonard Ingers</p>
+    </footer>
 </body>
-
 </html>
+
+
+
+
+
